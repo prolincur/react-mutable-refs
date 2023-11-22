@@ -1,0 +1,54 @@
+{
+  "name": "react-mutable-refs",
+  "version": "0.1.0",
+  "description": "React utility to create mutable ref or function",
+  "module": "src/main.js",
+  "main": "dist/app.js",
+  "exports": {
+    ".": {
+      "import": "./dist/app.js"
+    }
+  },
+  "files": [
+    "dist/*"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prolincur/react-mutable-refs"
+  },
+  "bugs": {
+    "url": "https://github.com/prolincur/react-mutable-refs/issues"
+  },
+  "homepage": "https://github.com/prolincur/react-mutable-refs",
+  "author": "Prolincur Technologies <https://www.prolincur.com>",
+  "license": "MIT",
+  "keywords": [
+    "kml",
+    "gis",
+    "threejs",
+    "react-three-fiber",
+    "r3f",
+    "three",
+    "loader",
+    "importer"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "yarn install && yarn build && cd examples && yarn install && yarn start",
+    "prettier": "prettier src/*.js --write"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "vite": "^4.4.5",
+    "vite-plugin-banner": "^0.7.1",
+    "vite-plugin-css-injected-by-js": "^3.3.0",
+    "vite-plugin-dts": "^3.6.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}

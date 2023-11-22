@@ -1,6 +1,6 @@
 {
   "name": "react-mutable-refs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "React utility to create mutable ref or function",
   "module": "src/main.js",
   "main": "dist/app.js",
@@ -26,14 +26,11 @@
   "author": "Prolincur Technologies <https://www.prolincur.com>",
   "license": "MIT",
   "keywords": [
-    "kml",
-    "gis",
-    "threejs",
-    "react-three-fiber",
-    "r3f",
-    "three",
-    "loader",
-    "importer"
+    "react",
+    "optimization",
+    "rerender",
+    "mutable",
+    "performance"
   ],
   "scripts": {
     "dev": "vite",

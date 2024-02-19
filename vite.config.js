@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /*
- * Copyright (c) 2020-23 Prolincur Technologies LLP.
+ * Copyright (c) 2020-24 Prolincur Technologies LLP.
  * All Rights Reserved.
  */
 
@@ -15,7 +15,7 @@ export default defineConfig({
     dts({ include: ['src'] }),
     cssInjectedByJsPlugin(),
     banner(
-        'Copyright (c) 2020-23 Prolincur Technologies LLP.\nAll Rights Reserved.\n\n' +
+        'Copyright (c) 2020-24 Prolincur Technologies LLP.\nAll Rights Reserved.\n\n' +
         'Please check the provided LICENSE file for licensing details.\n' +
         '\n' +
         'THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,\n' +

@@ -50,6 +50,13 @@ function useExampleHook(props) {
 
 ```
 
+### Components/Hooks/Functions
+- useMutableRef
+- useMutableFunc
+- mergeRefs
+- assignRefs
+- trackDefaultRef
+- trackLastRef
 
 ### Author
 

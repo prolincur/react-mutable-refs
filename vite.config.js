@@ -28,7 +28,7 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/main.js'),
+      entry: resolve(__dirname, 'src/index.js'),
       formats: ['es'],
     },
     copyPublicDir: false,
@@ -38,7 +38,7 @@ export default defineConfig({
         'react',
       ],
       input: {
-        app: './src/main.js',
+        app: './src/index.js',
       },
       output: {
         assetFileNames: 'assets/[name][extname]',

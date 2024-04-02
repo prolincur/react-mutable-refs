@@ -57,6 +57,8 @@ function useExampleHook(props) {
 - assignRefs
 - trackDefaultRef
 - trackLastRef
+- Refreshable
+- makeRefreshable
 
 ### Author
 

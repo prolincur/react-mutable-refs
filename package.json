@@ -1,6 +1,6 @@
 {
   "name": "react-mutable-refs",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "React utility to create mutable ref or function",
   "module": "dist/app.js",
   "main": "dist/app.js",

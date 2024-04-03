@@ -40,11 +40,10 @@ const Refreshable = React.forwardRef((props, ref) => {
     }
   }, [ref, refresh])
 
-  useTest()
-
   if (!childElement) return null
   return React.cloneElement(childElement, {
     ref: thisRef,
+    // eslint-disable-next-line no-unsafe-optional-chaining
     key: childElement.props?.key + key,
   })
 })

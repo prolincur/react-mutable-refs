@@ -1,6 +1,6 @@
 {
   "name": "react-mutable-refs",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "React utility to create mutable ref or function",
   "module": "dist/app.js",
   "main": "dist/app.js",
@@ -37,9 +37,21 @@
     "dev": "vite",
     "build": "vite build",
     "start": "yarn install && yarn build && cd examples && yarn install && yarn start",
-    "prettier": "prettier src/*.js --write"
+    "prettier": "prettier src/*.js --write",
+    "lint": "eslint src --ext js,jsx"
   },
   "devDependencies": {
+    "eslint": "^8.45.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
     "prettier": "^3.0.3",
     "vite": "^4.4.5",
     "vite-plugin-banner": "^0.7.1",
@@ -47,7 +59,7 @@
     "vite-plugin-dts": "^3.6.0"
   },
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": ">=17"
   },
   "dependencies": {
     "prop-types": "^15.8.1",

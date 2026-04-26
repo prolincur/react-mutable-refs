@@ -37,7 +37,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "start": "yarn install && yarn build && cd examples && yarn install && yarn start",
     "prettier": "prettier src/*.js --write",
     "lint": "eslint src --ext js,jsx"
   },

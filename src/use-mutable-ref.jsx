@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020-24 Prolincur Technologies LLP.
+ * Copyright (c) 2020-26 Prolincur Technologies LLP.
  * All Rights Reserved.
  */
 
@@ -11,15 +11,10 @@ import React from 'react'
  *
  * @param {any} value Any value
  *
- * @author Sourabh Soni <https://prolincur.com>
  */
 const useMutableRef = (value) => {
   const valueRef = React.useRef(value)
-
-  React.useLayoutEffect(() => {
-    valueRef.current = value
-  }, [value])
-
+  valueRef.current = value
   return valueRef
 }
 

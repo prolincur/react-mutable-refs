@@ -1,7 +1,7 @@
 {
   "name": "react-mutable-refs",
-  "version": "4.1.0",
-  "description": "React utility to create mutable ref or function",
+  "version": "5.0.0",
+  "description": "Zero-dependency React utilities for mutable refs, stable callbacks, ref merging, and refreshable components",
   "module": "dist/app.js",
   "main": "dist/app.js",
   "exports": {
@@ -29,9 +29,10 @@
     "mutable",
     "performance",
     "mergeRefs",
-    "useMutuableRef",
-    "useMutuableFunc",
-    "assignRefs"
+    "useMutableRef",
+    "useMutableFunc",
+    "assignRefs",
+    "prolincur"
   ],
   "scripts": {
     "dev": "vite",
@@ -41,6 +42,7 @@
     "lint": "eslint src --ext js,jsx"
   },
   "devDependencies": {
+    "prop-types": "^15.8.1",
     "eslint": "^8.45.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.0.0",
@@ -61,8 +63,5 @@
   "peerDependencies": {
     "react": ">=17"
   },
-  "dependencies": {
-    "prop-types": "^15.8.1",
-    "react-merge-refs": "^2.1.1"
-  }
+  "dependencies": {}
 }

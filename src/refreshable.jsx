@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020-22 Prolincur Technologies LLP.
+ * Copyright (c) 2020-26 Prolincur Technologies LLP.
  * All Rights Reserved.
  */
 
@@ -14,10 +14,8 @@ import { trackDefaultRef } from './track-default-ref'
  * To refresh: call Refreshable.markDirty(id).
  * Limitations: markDirty will trigger refresh for ALL instances of the wrapped component
  *
- * @author Sourabh Soni <https://prolincur.com>
  */
-const Refreshable = React.forwardRef((props, ref) => {
-  const { children } = props
+const Refreshable = React.forwardRef(({ children = null }, ref) => {
   const thisRef = React.useRef(null)
   // Counter to remount the component
   const [key, setKey] = React.useState(0)
@@ -40,20 +38,14 @@ const Refreshable = React.forwardRef((props, ref) => {
     }
   }, [ref, refresh])
 
-  if (!childElement) return null
   return React.cloneElement(childElement, {
     ref: thisRef,
-    // eslint-disable-next-line no-unsafe-optional-chaining
-    key: childElement.props?.key + key,
+    key: `${childElement.key ?? ''}_${key}`,
   })
 })
 
 Refreshable.propTypes = {
   children: PropTypes.node,
-}
-
-Refreshable.defaultProps = {
-  children: null,
 }
 
 /**
@@ -69,6 +61,7 @@ const makeRefreshable = (Component) => {
       </Refreshable>
     ))
   )
+  WrappedComponent.displayName = `makeRefreshable(${Component.displayName ?? Component.name})`
   // NOTE: this global refresh works only on default instance
   WrappedComponent.refresh = () => WrappedComponent.defaultRef?.current?.refresh?.()
   return WrappedComponent

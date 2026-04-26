@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020-24 Prolincur Technologies LLP.
+ * Copyright (c) 2020-26 Prolincur Technologies LLP.
  * All Rights Reserved.
  */
 
@@ -11,15 +11,11 @@ import { useMutableRef } from './use-mutable-ref'
  *
  * @param {func} value A function
  *
- * @author Sourabh Soni <https://prolincur.com>
  */
 const useMutableFunc = (callback) => {
   const callbackRef = useMutableRef(callback)
 
-  // Wrapper on the ref
-  const mutableCallback = React.useCallback((...args) => callbackRef.current?.(...args), [
-    callbackRef,
-  ])
+  const mutableCallback = React.useCallback((...args) => callbackRef.current?.(...args), [])
 
   return mutableCallback
 }

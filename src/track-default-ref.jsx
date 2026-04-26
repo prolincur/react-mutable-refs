@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020-24 Prolincur Technologies LLP.
+ * Copyright (c) 2020-26 Prolincur Technologies LLP.
  * All Rights Reserved.
  */
 
@@ -11,22 +11,19 @@ const trackDefaultRef = (Component) => {
   const defaultInstanceRef = React.createRef(null)
 
   const WrappedComponent = React.forwardRef((props, ref) => {
-    const { makeDefault, ...restProps } = props
+    const { makeDefault = false, ...restProps } = props
     const refs = React.useMemo(() => (makeDefault ? [defaultInstanceRef, ref] : [ref]), [
       makeDefault,
       ref,
     ])
     return <Component ref={mergeRefs(refs)} {...restProps} />
   })
-  
+
   WrappedComponent.propTypes = {
     makeDefault: PropTypes.bool,
   }
 
-  WrappedComponent.defaultProps = {
-    makeDefault: false,
-  }
-
+  WrappedComponent.displayName = `trackDefaultRef(${Component.displayName ?? Component.name})`
   WrappedComponent.defaultRef = defaultInstanceRef
   return WrappedComponent
 }

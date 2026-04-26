@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020-24 Prolincur Technologies LLP.
+ * Copyright (c) 2020-26 Prolincur Technologies LLP.
  * All Rights Reserved.
  */
 
@@ -13,6 +13,7 @@ const trackLastRef = (Component) => {
     <Component ref={mergeRefs([lastInstanceRef, ref])} {...props} />
   ))
   
+  WrappedComponent.displayName = `trackLastRef(${Component.displayName ?? Component.name})`
   WrappedComponent.lastRef = lastInstanceRef
   return WrappedComponent
 }

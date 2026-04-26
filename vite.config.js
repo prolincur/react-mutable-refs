@@ -15,7 +15,7 @@ export default defineConfig({
     dts({ include: ['src'] }),
     cssInjectedByJsPlugin(),
     banner(
-        'Copyright (c) 2020-24 Prolincur Technologies LLP.\nAll Rights Reserved.\n\n' +
+        'Copyright (c) 2020-26 Prolincur Technologies LLP.\nAll Rights Reserved.\n\n' +
         'Please check the provided LICENSE file for licensing details.\n' +
         '\n' +
         'THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,\n' +

@@ -1,8 +1,16 @@
 /*
- * Copyright (c) 2020-24 Prolincur Technologies LLP.
+ * Copyright (c) 2020-26 Prolincur Technologies LLP.
  * All Rights Reserved.
  */
 
-import { mergeRefs } from 'react-merge-refs'
+const mergeRefs = (refs) => (value) => {
+  refs.forEach((ref) => {
+    if (typeof ref === 'function') {
+      ref(value)
+    } else if (ref != null) {
+      ref.current = value
+    }
+  })
+}
 
 export { mergeRefs }
